@@ -1,0 +1,17 @@
+$accent: #7bd33e;
+$ink: #0c0e0d;
+$paper: #edefea;
+$text: #f4f6f1;
+
+:root {
+  --accent: #{$accent};
+  --ink: #{$ink};
+  --paper: #{$paper};
+  --text: #{$text};
+  --font-text: "Onest", sans-serif;
+  --font-display: "Unbounded", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --line: rgba(244, 246, 241, 0.18);
+  --mute: #a9b0aa;
+  --tile: #171a18;
+}

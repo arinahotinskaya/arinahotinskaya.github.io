@@ -1,0 +1,453 @@
+@media (max-width: 1100px) {
+  .hero {
+    &__layout {
+      gap: 40px;
+    }
+
+    &__portrait {
+      min-height: 420px;
+    }
+  }
+
+  .split {
+    column-gap: 32px;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .shot--look {
+    min-width: 0;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 7 / 8;
+  }
+
+  .palette--look {
+    grid-column: 1 / -1;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .swatch {
+      flex: 1 1 140px;
+      height: auto;
+      min-height: 92px;
+    }
+  }
+
+  .merch {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    align-items: start;
+
+    &__hoodies {
+      grid-column: 1 / -1;
+      grid-row: 1;
+    }
+
+    &__row--carry,
+    &__row--pack {
+      display: contents;
+    }
+
+    &__row--carry .shot:nth-child(1) {
+      grid-column: 1;
+      grid-row: 2;
+    }
+
+    &__row--carry .shot:nth-child(2) {
+      grid-column: 2;
+      grid-row: 2;
+    }
+
+    &__row--carry .shot:nth-child(3) {
+      grid-column: 1;
+      grid-row: 3;
+    }
+
+    .shot--merch-bag {
+      grid-column: 2;
+      grid-row: 3;
+    }
+
+    &__hats {
+      grid-column: 1 / -1;
+      grid-row: 4;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      aspect-ratio: auto;
+      overflow: visible;
+    }
+
+    &__hat {
+      position: relative;
+      left: auto;
+      top: auto;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 3 / 4;
+      transform: none;
+      object-fit: contain;
+
+      &--cap {
+        grid-column: 1;
+        grid-row: 1;
+        height: auto;
+        object-view-box: inset(30% 4% 2% 4%);
+        object-position: center;
+      }
+
+      &--panama {
+        grid-column: 2;
+        grid-row: 1;
+        height: auto;
+        object-view-box: inset(22% 1% 14% 1%);
+        object-position: center;
+      }
+    }
+  }
+
+  #graphic {
+    .split {
+      align-items: start;
+      column-gap: 24px;
+      row-gap: 20px;
+    }
+
+    .split__col {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      grid-row: auto;
+    }
+
+    .split__text {
+      flex: none;
+    }
+
+    .signs,
+    .signs__row {
+      gap: 12px;
+    }
+  }
+
+  .ig-grid {
+    gap: 10px;
+
+    &__reels {
+      column-gap: 10px;
+      row-gap: 6px;
+    }
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #badges-2026 .stats__item:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .screen,
+  .project-card {
+    flex-basis: 100%;
+    height: min(56vw, 520px);
+  }
+
+  .screen {
+    .shot--laptop:has(.shot__image) {
+      right: 0;
+      top: 56%;
+      width: 74%;
+    }
+
+    .shot--phone:has(.shot__image) {
+      left: 3%;
+      bottom: 8%;
+      width: 40%;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    padding-inline: 20px;
+  }
+
+  .section,
+  .footer {
+    padding: 72px 0;
+  }
+
+  .section__intro {
+    margin-bottom: 32px;
+  }
+
+  .section__lead,
+  .split__text {
+    max-width: 62ch;
+  }
+
+  .hero {
+    &__intro {
+      max-width: none;
+    }
+
+    &__portrait {
+      min-width: 100%;
+      height: min(140vw, 760px);
+    }
+
+    &__portrait-image {
+      object-position: center 34%;
+    }
+  }
+
+  .toc {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+
+    &__item:nth-child(n) {
+      grid-column: auto;
+      grid-row: auto;
+    }
+  }
+
+  #graphic {
+    .split {
+      grid-template-columns: 1fr;
+    }
+
+    .split__col {
+      gap: 12px;
+    }
+
+    .shot--poster {
+      aspect-ratio: 1092 / 1280;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    padding-inline: 16px;
+  }
+
+  .section,
+  .footer {
+    padding: 56px 0;
+  }
+
+  .footer {
+    min-height: 0;
+
+    &__title {
+      margin-bottom: 24px;
+      font-size: clamp(40px, 13vw, 72px);
+    }
+  }
+
+  .hero {
+    &__inner {
+      padding-top: 28px;
+      padding-bottom: 36px;
+    }
+
+    &__meta {
+      margin-bottom: 28px;
+    }
+
+    &__layout {
+      gap: 28px;
+    }
+
+    &__intro {
+      gap: 22px;
+    }
+
+    &__title {
+      font-size: clamp(34px, 10.5vw, 56px);
+    }
+
+    &__portrait {
+      height: min(118vw, 520px);
+      border-radius: 24px;
+    }
+
+    &__portrait-image {
+      object-position: center 20%;
+    }
+  }
+
+  .section {
+    &__kicker {
+      margin-bottom: 20px;
+      gap: 12px;
+    }
+
+    &__title {
+      font-size: clamp(30px, 8.6vw, 42px);
+    }
+
+    &__lead,
+    &__copy {
+      font-size: 16px;
+    }
+
+    &__intro {
+      gap: 14px;
+    }
+  }
+
+  .split__text {
+    font-size: 16px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+
+    > .shot--look,
+    > .shot--look:nth-child(2) {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      justify-self: stretch;
+      margin-left: 0;
+      transform: none;
+
+      .shot__image {
+        object-fit: cover;
+        transform: scale(1.42);
+      }
+    }
+  }
+
+  .palette--look .swatch {
+    flex: 1 1 calc(50% - 10px);
+    min-width: calc(50% - 10px);
+    min-height: 76px;
+  }
+
+  .merch,
+  .merch__hats {
+    gap: 12px;
+  }
+
+  .merch {
+    &__hoodies {
+      aspect-ratio: 1000 / 560;
+    }
+
+    &__flatbox {
+      max-width: 74%;
+
+      &--black {
+        justify-self: start;
+      }
+
+      &--lime {
+        justify-self: end;
+      }
+    }
+
+    &__person {
+      width: 40%;
+      height: auto;
+    }
+  }
+
+  .compare {
+    &__card {
+      padding: 22px;
+      min-height: 0;
+    }
+
+    &__text {
+      font-size: 18px;
+    }
+  }
+
+  .badges {
+    gap: 10px;
+
+    &--stilyagi {
+      flex-wrap: nowrap;
+    }
+
+    &--techno {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px 8px;
+    }
+  }
+
+  .stats,
+  #instagram .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    &__item {
+      min-height: 0;
+      padding: 20px;
+    }
+
+    &__label {
+      font-size: 15px;
+    }
+  }
+
+  .renders__row--furniture,
+  .renders__row--pair {
+    grid-template-columns: 1fr;
+  }
+
+  .screen {
+    height: 250px;
+
+    .shot--laptop:has(.shot__image) {
+      right: -6%;
+      top: 58%;
+      width: 86%;
+    }
+
+    .shot--phone:has(.shot__image) {
+      left: 0;
+      bottom: 6%;
+      width: 48%;
+    }
+
+    &__caption {
+      left: 14px;
+      top: 12px;
+    }
+  }
+
+  .project-card {
+    height: auto;
+    min-height: 200px;
+    padding: 24px;
+    gap: 36px;
+
+    &__link {
+      font-size: clamp(24px, 8vw, 34px);
+    }
+  }
+
+  .tags__item {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1100px) {
+  #instagram .stats {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
